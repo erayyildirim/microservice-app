@@ -1,7 +1,9 @@
 package com.microservices.accountservice.service;
 
 
-import com.microservices.accountservice.entity.Account;
+import com.microservices.accountservice.dto.AccountDto;
+import org.springframework.data.domain.Pageable;
+
 
 import java.util.List;
 
@@ -10,13 +12,13 @@ import java.util.List;
  */
 public interface AccountService {
 
-    Account get(String id);
+    AccountDto get(String id);
 
-    Account save(Account account);
+    AccountDto save(AccountDto account);
 
-    Account update(String id, Account account);
+    AccountDto update(String id, AccountDto account);
 
     void delete(String id);
 
-    List<Account> findAll();
+    List<AccountDto> findAll(Pageable pageable);
 }

@@ -1,8 +1,8 @@
 spring:
+  application:
+    name: account-service
+
   cloud:
     config:
       profile: native
       uri: http://localhost:8888
-
-  application:
-    name: account-service

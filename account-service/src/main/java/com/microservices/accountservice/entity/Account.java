@@ -23,7 +23,7 @@ public class Account implements Serializable {
     @PrimaryKey
     private String id = UUID.randomUUID().toString();
 
-    @Column(value = "uname")
+    @Column(value = "user_name")
     private String username;
 
     @Column(value = "name")

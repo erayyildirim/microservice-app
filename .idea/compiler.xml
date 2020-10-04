@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="account-service" />
         <module name="config-server" />
+        <module name="discovery-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
       <module name="account-service" options="-parameters" />
       <module name="account-service2" options="-parameters" />
       <module name="config-server" options="-parameters" />
+      <module name="discovery-service" options="-parameters" />
       <module name="service-parent" options="-parameters" />
       <module name="x" options="-parameters" />
     </option>

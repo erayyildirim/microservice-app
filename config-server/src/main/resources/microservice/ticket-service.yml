@@ -1,9 +1,23 @@
 server:
   port: 8502
 
+
 spring:
   application:
     name: ticket-service
+
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/microserviceapp
+    username: root
+    password: microservice-app
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      show_sql: true
 
 eureka:
   client:

@@ -10,6 +10,7 @@
         <module name="account-service" />
         <module name="config-server" />
         <module name="discovery-service" />
+        <module name="service-communication" />
         <module name="ticket-service" />
       </profile>
     </annotationProcessing>
@@ -25,6 +26,7 @@
       <module name="account-service2" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
+      <module name="service-communication" options="-parameters" />
       <module name="service-parent" options="-parameters" />
       <module name="ticket-service" options="-parameters" />
       <module name="x" options="-parameters" />

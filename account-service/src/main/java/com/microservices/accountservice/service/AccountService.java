@@ -1,7 +1,7 @@
 package com.microservices.accountservice.service;
 
 
-import com.microservices.accountservice.dto.AccountDto;
+import com.microservice.client.contract.AccountDto;
 import org.springframework.data.domain.Pageable;
 
 

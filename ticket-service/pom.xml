@@ -50,6 +50,11 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.21</version>
         </dependency>
+        <dependency>
+            <groupId>com.microservices</groupId>
+            <artifactId>service-communication</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
     </dependencies>
 

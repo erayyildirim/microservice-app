@@ -27,6 +27,7 @@
         <module>config-server</module>
         <module>discovery-service</module>
         <module>ticket-service</module>
+        <module>service-communication</module>
     </modules>
 
     <dependencyManagement>

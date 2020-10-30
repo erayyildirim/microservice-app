@@ -5,5 +5,4 @@ com\microservices\accountservice\service\AccountService.class
 com\microservices\accountservice\service\impl\AccountServiceImpl.class
 com\microservices\accountservice\config\CustomBeanFactory.class
 com\microservices\accountservice\entity\Account.class
-com\microservices\accountservice\dto\AccountDto.class
 com\microservices\accountservice\repo\AccountRepo.class

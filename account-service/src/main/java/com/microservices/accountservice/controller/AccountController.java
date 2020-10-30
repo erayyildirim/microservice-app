@@ -1,6 +1,6 @@
 package com.microservices.accountservice.controller;
 
-import com.microservices.accountservice.dto.AccountDto;
+import com.microservice.client.contract.AccountDto;
 import com.microservices.accountservice.service.AccountService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;

@@ -1,6 +1,6 @@
 package com.microservices.accountservice.service.impl;
 
-import com.microservices.accountservice.dto.AccountDto;
+import com.microservice.client.contract.AccountDto;
 import com.microservices.accountservice.repo.AccountRepo;
 import com.microservices.accountservice.entity.Account;
 import com.microservices.accountservice.service.AccountService;

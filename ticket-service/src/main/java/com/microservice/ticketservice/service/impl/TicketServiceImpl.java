@@ -2,6 +2,7 @@ package com.microservice.ticketservice.service.impl;
 
 import com.microservice.client.AccountServiceClient;
 import com.microservice.client.contract.AccountDto;
+import com.microservice.messaging.TicketNotification;
 import com.microservice.ticketservice.dto.TicketDto;
 import com.microservice.ticketservice.entity.PriorityType;
 import com.microservice.ticketservice.entity.Ticket;
@@ -9,6 +10,7 @@ import com.microservice.ticketservice.entity.TicketStatus;
 import com.microservice.ticketservice.entity.es.TicketModel;
 import com.microservice.ticketservice.repo.TicketRepository;
 import com.microservice.ticketservice.repo.es.TicketElasticRepository;
+import com.microservice.ticketservice.service.TicketNotificationProducerService;
 import com.microservice.ticketservice.service.TicketService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -27,8 +29,8 @@ public class TicketServiceImpl implements TicketService {
 
     private final TicketRepository ticketRepository;
     private final TicketElasticRepository ticketElasticRepository;
-    private final ModelMapper modelMapper;
     private final AccountServiceClient accountServiceClient;
+    private final TicketNotificationProducerService ticketNotificationProducerService;
 
     @Override
     public TicketDto getById(String id) {
@@ -65,6 +67,8 @@ public class TicketServiceImpl implements TicketService {
                 .ticketDate(ticket.getTicketDate()).build();
 
         ticketElasticRepository.save(model);
+
+        ticketNotificationProducerService.sendToQueue(ticket);
 
         ticketDto.setId(ticket.getId());
         return null;

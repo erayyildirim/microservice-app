@@ -18,6 +18,14 @@ spring:
     hibernate:
       ddl-auto: update
       show_sql: true
+  rabbitmq:
+    username: erayy
+    password: erayy
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: notification.q
 
 eureka:
   client:
